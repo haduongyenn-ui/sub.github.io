@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Nền trang */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+
+  /* Background gradient nhiều lớp */
+  background: linear-gradient(135deg, #1e272e, #2c3e50, #34495e);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+
+  /* Overlay pattern mờ */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 25px 25px;
+  z-index: 0;
+}
+
+/* Nội dung trên nền */
+.card, .ads-area {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card chính */
+.card {
+  background: rgba(59, 59, 152, 0.9);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(8px);
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #f1f2f6;
+  margin-bottom: 20px;
+}
+
+/* Nút bấm */
+.action {
+  background: linear-gradient(90deg, #00a8ff, #0097e6);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.action:hover {
+  background: linear-gradient(90deg, #0097e6, #00a8ff);
+  transform: scale(1.05);
+}
+
+/* Trạng thái */
+.status {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #f6e58d;
+}
+
+/* Nút mở khóa */
+.unlock a {
+  display: inline-block;
+  background: #44bd32;
+  padding: 12px 18px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.unlock a:hover {
+  background: #4cd137;
+  transform: scale(1.05);
+}
+
+/* Footer ads */
+.ads-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.ads {
+  background: rgba(47, 54, 64, 0.9);
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
